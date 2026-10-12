@@ -1,210 +1,102 @@
 <div align="center">
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset=".github/assets/banner-dark.png">
-  <source media="(prefers-color-scheme: light)" srcset=".github/assets/banner-light.png">
-  <img alt="MDHero" src=".github/assets/banner-light.png" width="100%">
-</picture>
-<br>
-A beautiful, native Markdown viewer and lightweight editor for macOS, Windows and Linux. ~8MB. Free. Open source.
-<br><br>
 
-[![GitHub Stars](https://img.shields.io/github/stars/vaibhav-kakde-in/mdhero?style=flat-square)](https://github.com/vaibhav-kakde-in/mdhero/stargazers)
-[![Downloads](https://img.shields.io/github/downloads/vaibhav-kakde-in/mdhero/total?style=flat-square)](https://github.com/vaibhav-kakde-in/mdhero/releases/latest)
-[![License](https://img.shields.io/github/license/vaibhav-kakde-in/mdhero?style=flat-square)](LICENSE)
-![macOS](https://img.shields.io/badge/macOS-supported-blue?style=flat-square&logo=apple)
-![Windows](https://img.shields.io/badge/Windows-supported-blue?style=flat-square&logo=windows)
-![Linux](https://img.shields.io/badge/Linux-supported-blue?style=flat-square&logo=linux)
-[![Built with Tauri](https://img.shields.io/badge/Built_with-Tauri-FFC131?style=flat-square&logo=tauri)](https://tauri.app)
+# MDHero 中文版
 
-[Download](https://github.com/vaibhav-kakde-in/mdhero/releases/latest) · [Website](https://mdhero.app) · [Discussions](https://github.com/vaibhav-kakde-in/mdhero/discussions)
+**MDHero** 的简体中文本地构建版 —— 一款轻快、好看的原生 Markdown 阅读与编辑工具
+
+基于官方 [v0.2.10](https://github.com/vaibhav-kakde-in/mdhero) + 官方 i18n PR [#141](https://github.com/vaibhav-kakde-in/mdhero/pull/141) 构建
+
+![Version](https://img.shields.io/badge/MDHero-v0.2.10-teal) ![UI](https://img.shields.io/badge/界面-简体中文-red) ![Platform](https://img.shields.io/badge/Windows-x64-blue) ![License](https://img.shields.io/badge/License-MIT-green)
 
 </div>
 
-<table>
-<tr>
-<td><img src=".github/assets/hero-light.png" alt="MDHero Light Mode"></td>
-<td><img src=".github/assets/hero-dark.png" alt="MDHero Dark Mode"></td>
-</tr>
-<tr>
-<td align="center"><em>Light mode</em></td>
-<td align="center"><em>Dark mode</em></td>
-</tr>
-</table>
-
-Open local `.md` files, paste AI-generated markdown, or fetch from any public URL — and read or edit it the way it was meant to be.
+![中文界面截图](assets/screenshot-zh.png)
 
 ---
 
-## Why MDHero
+> 🌐 English version: see [README.en.md](README.en.md)
 
-Markdown is where developers, writers, and AI live today — READMEs, Claude Code plans, LLM chat exports, notes, documentation. But opening a `.md` file in a code editor gives you ugly monospace text. Opening a web-based viewer means uploading your files. GitHub renders it beautifully but only if the file is in a repo.
+## ✨ 这是什么
 
-**MDHero is a native app for everything in between.** Your files stay local. Rendering is instant. Edit in place when you need to. Works offline. Looks like it belongs on your machine.
+[MDHero](https://github.com/vaibhav-kakde-in/mdhero) 是一款基于 Tauri 的原生 Markdown 阅读器与轻量编辑器（约 8 MB、免费开源），但官方界面目前只有英文。
+本仓库是我个人使用的**中文构建版**：官方最新代码 + 官方 i18n 分支的简体中文翻译，本地编译打包，开箱即用。
 
----
+## 🔧 与官方版的差异
 
-## Features
+| 项目 | 官方版 v0.2.10 | 本仓库构建版 |
+| --- | --- | --- |
+| 界面语言 | 仅英文 | **简体中文 / English 可切换**（设置 → 常规 → 语言），原生菜单栏同步切换，含首次启动语言选择 |
+| 代码基线 | `main` @ v0.2.10 | 官方 main + PR #141（i18n 分支，5 commits） |
+| 代码签名 | 未签名（Windows） | 未签名（自构建） |
+| 应用内更新 | 指向官方发布源 | **请勿使用**（见下方注意事项） |
+| AI 功能 | 官方 AI Lookup（浏览器跳转） | 保留官方 AI Lookup；**未**集成任何第三方 AI 面板 |
 
-### Reading
-- **Beautiful rendering** — Apple-inspired typography, light & dark themes
-- **Syntax highlighting** — 25+ languages via highlight.js
-- **Math & diagrams** — KaTeX for equations, Mermaid for flowcharts
-- **Reader controls** — adjust font, size, line height, width
-- **Zen mode** — distraction-free full-screen reading
-- **Print/Export to PDF** — File › Print or Cmd/Ctrl+P opens the native print dialog (print to paper or to PDF), with clean print styles
+除 i18n 外**没有任何功能改动**——渲染、编辑、分屏、Marp 演示、热重载、打印等全部与官方 v0.2.10 一致。
 
-### Editing (v0.2.0)
-- **Lightweight in-app editor** — `Cmd+E` flips any local file into edit mode
-- **Save with `Cmd+S`** — writes back to disk; the file watcher knows it was you and skips the reload
-- **Stays where you were** — source-line scroll sync keeps your position across viewer ↔ raw ↔ edit
-- **Dirty indicator** — `•` in the tab title and toolbar when you have unsaved changes
-- **Per-tab edit state** — switch tabs and back; your edits are right where you left them
+## 📥 安装
 
-### Navigation
-- **Multiple tabs** — open many files, drag to reorder, Cmd+1–9 to switch
-- **Table of Contents** — auto-generated sidebar with active heading tracking
-- **Search (Cmd+F)** — with match highlighting
-- **Vim keys** — j/k/gg/G/d/u/[/] for keyboard-first navigation
-- **Image lightbox** — click to zoom, arrow keys for next/prev
+前往 [Releases](../../releases) 下载（二选一）：
 
-### Opening Files
-- **Local files** — drag-drop, Cmd+O, "Open With" from Finder
-- **Pinned folders** — quick access to markdown in your favorite directories
-- **Claude Code Plans** — auto-discovers `~/.claude/plans/`
-- **Open URL** — fetch from GitHub, Gist, GitLab, Bitbucket, or any public URL
-- **Paste mode (Cmd+Shift+V)** — render LLM output instantly, auto-unescapes `\n`
-- **Recent files** — pick up where you left off, with reading progress per file
+- `MDHero_0.2.10_x64_en-US.msi` —— 推荐，标准安装
+- `MDHero_0.2.10_x64-setup.exe` —— NSIS 安装器
 
-### Live
-- **File watching** — edit in VS Code, see updates instantly in MDHero
-- **Auto-reload** — survives atomic saves (VS Code, vim, etc.)
+> ⚠️ **首次运行提示**：安装包未经代码签名，Windows SmartScreen 可能弹出"未知发布者"警告 ——
+> 点击 **更多信息 → 仍要运行** 即可。这是所有未签名开源程序的正常现象。
 
-### Sharing
-- **Copy as Rich Text** — paste directly into Google Docs, Notion
-- **Copy as Markdown** — raw source
-- **Print / Export PDF** — File › Print, Cmd/Ctrl+P, or the toolbar button; print-friendly output
+> ⚠️ **如已安装官方英文版**：建议先在「设置 → 应用 → 已安装的应用」中卸载官方 MDHero，再安装本中文版，避免更新检测互相干扰。
 
----
+> ⚠️ **请勿点击应用内"检查更新 / 立即更新"**：构建时沿用了官方更新源，应用内更新会把中文版覆盖回英文官方版。需要新版本时，回到本仓库取新的 Release，或按下方说明自行构建。
 
-## Screenshots
+安装后首次启动会弹出语言选择框，选择 **简体中文** 即可；之后可在 设置 → 常规 → 语言 中随时切换（支持"跟随系统"）。
 
-### Syntax Highlighting
+## 🛠️ 从源码构建
 
-25+ languages with automatic detection, copy button, and clean typography.
+环境要求（Windows）：
 
-<img src=".github/assets/syntax-highlighting.png" alt="Syntax Highlighting" width="800">
-
-### Math Rendering (KaTeX)
-
-Render LaTeX equations instantly — from inline math to full block equations and matrices.
-
-<img src=".github/assets/math-katex.png" alt="KaTeX Math Rendering" width="800">
-
-### Mermaid Diagrams
-
-Flowcharts, sequence diagrams, class diagrams, and more — rendered natively.
-
-<img src=".github/assets/mermaid-flowchart.png" alt="Mermaid Diagrams" width="800">
-
-### Zen Mode
-
-Distraction-free full-screen reading. Just you and the document.
-
-<img src=".github/assets/mermaid-zen.png" alt="Zen Mode" width="800">
-
----
-
-## Install
-
-**macOS** (Apple Silicon): Download `.dmg` from [Releases →](https://github.com/vaibhav-kakde-in/mdhero/releases/latest)
-
-**Windows** (x64 or ARM64): Download `.msi` or `-setup.exe` from [Releases →](https://github.com/vaibhav-kakde-in/mdhero/releases/latest) — pick the `x64` or `arm64` file for your machine
-
-**Linux** (x64 or arm64): Download `.deb` (Debian/Ubuntu), `.rpm` (Fedora/openSUSE) or `.AppImage` (any distro) from [Releases →](https://github.com/vaibhav-kakde-in/mdhero/releases/latest) — `amd64`/`x86_64` or `arm64`/`aarch64`
-
-Or build from source (see below).
-
----
-
-## Keyboard Shortcuts
-
-| Shortcut | Action |
-|---|---|
-| `Cmd+O` | Browse files |
-| `Cmd+Shift+V` | Paste markdown |
-| `Cmd+T` | New tab (home) |
-| `Cmd+W` | Close tab (confirms if unsaved edits) |
-| `Cmd+1..9` | Switch to tab N |
-| `Cmd+F` | Find in document |
-| `Cmd+E` | Toggle edit mode |
-| `Cmd+S` | Save edits to disk |
-| `Cmd+U` | Toggle raw markdown view |
-| `Cmd+Shift+F` | Zen mode |
-| `Cmd+=` / `Cmd+-` | Zoom in / out |
-| `Ctrl` + mouse wheel | Zoom in / out (`Ctrl` on every platform) |
-| `Cmd+0` | Reset zoom |
-| `j` / `k` | Scroll down / up |
-| `gg` / `G` | Jump to top / bottom |
-| `[` / `]` | Previous / next heading |
-| `/` | Open search |
-
-Cmd → Ctrl on Windows/Linux.
-
----
-
-## Development
+- [Node.js](https://nodejs.org/) ≥ 20（实测 v25）+ [pnpm](https://pnpm.io/) ≥ 9
+- [Rust](https://rustup.rs/) stable-msvc 工具链
+- Visual Studio Build Tools（C++ 桌面开发工作负载）+ Windows 11 SDK
 
 ```bash
+# 1. 安装前端依赖
 pnpm install
-pnpm tauri dev          # Run dev with hot reload
-pnpm tauri build        # Production build (outputs DMG/MSI)
-pnpm check              # TypeScript check
+
+# 2. （可选）验证
+pnpm check        # 类型检查，0 错误
+pnpm test         # 单元测试，225 用例
+
+# 3. 构建安装包（产物在 src-tauri/target/release/bundle/）
+pnpm tauri build --bundles msi,nsis
 ```
 
-**Requirements:** Node 22+, Rust stable, pnpm 10+.
+> 💡 在 Windows 上克隆本仓库后，建议先执行 `git config core.autocrlf false` 再重新检出，
+> 否则 CRLF 换行符会导致 `version-sync`、`quicklook-bundle` 两个测试失败（与汉化无关，是仓库脚本按 LF 编写）。
 
-Port 1420 is used for dev. Kill stale processes with `lsof -ti:1420 | xargs kill -9`.
+## 📁 仓库结构
 
-### Stack
+本仓库保留上游完整目录结构，改动集中在：
 
-- [Tauri v2](https://tauri.app) — Rust backend, ~11MB binary
-- [SvelteKit](https://kit.svelte.dev) — frontend with Svelte 5 runes
-- [markdown-it](https://github.com/markdown-it/markdown-it) — rendering pipeline
-- [highlight.js](https://highlightjs.org) — syntax highlighting
-- [KaTeX](https://katex.org) — math rendering
-- [Mermaid](https://mermaid.js.org) — diagram rendering
-- [Tailwind CSS v4](https://tailwindcss.com) — styling
+```
+src/lib/i18n/            # 国际化模块（来自官方 PR #141）
+  locales/zh-CN.json     #   简体中文语言包（262 键；缺的 2 键为英文复数形式，中文不适用）
+  locales/en.json        #   英文（回退）
+  locales/{de,es,fr}.json#   其他官方翻译
+src-tauri/src/menu.rs    # 原生菜单跟随界面语言切换
+assets/screenshot-zh.png # 本 README 截图
+README.md                # 本文件（中文）
+README.en.md             # 英文版
+README.upstream.md       # 官方原版 README（未改动）
+```
 
----
+## ⚖️ 许可与免责声明
 
-## Privacy
+- 上游 MDHero 与本构建版均基于 **MIT License**（见 [LICENSE](LICENSE)），翻译文本随仓库一并开源。
+- 本项目为**个人非官方构建**，与 MDHero 官方无任何关联；不代表官方发布，也不获得官方支持。
+- 安装包未做代码签名，仅建议**自行构建后使用**（这也是把源码完整放在这里的原因）。
+- 官方原文请见 [README.upstream.md](README.upstream.md) 与 [mdhero.app](https://mdhero.app)。
 
-MDHero runs entirely on your machine.
+## 🙏 致谢
 
-- **No telemetry.** No analytics. No tracking.
-- **No account required.** Use it anonymously.
-- **Your files never leave your computer.** Rendering happens locally.
-- **Network access** is limited to: checking for new releases (once per 24h) and fetching URLs you explicitly paste into the Open URL feature.
-
----
-
-## Roadmap
-
-**Coming next:**
-- Quick Switcher (Cmd+P fuzzy finder)
-- Folder watch (auto-refresh pinned folder contents)
-- Export to self-contained HTML
-- Presentation mode
-- Compare / diff view
-
----
-
-## Contributing
-
-See [CONTRIBUTING.md](CONTRIBUTING.md) for setup, guidelines, and how to propose changes.
-
----
-
-## License
-
-MIT © Vaibhav Kakde
+- [vaibhav-kakde-in/mdhero](https://github.com/vaibhav-kakde-in/mdhero) —— 优秀的原作者与维护者
+- [@hdo-projects](https://github.com/hdo-projects) 等 —— 官方 i18n PR #141 作者（zh-CN 翻译基于其工作）
+- 官方中文版合并进主线后，本仓库将退役或转为纯构建指南
