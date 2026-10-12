@@ -203,20 +203,6 @@
   "dropzone": {
     "drop": "Drop to open"
   },
-  "update": {
-    "downloading": "Downloading update… {progress}%",
-    "installing": "Installing update…",
-    "downloadingShort": "Downloading… {progress}%",
-    "installingShort": "Installing…",
-    "failed": "Update failed",
-    "available": "Update available — ",
-    "downloadManually": "Download manually",
-    "later": "Later",
-    "releaseNotes": "Release notes",
-    "updateNow": "Update now",
-    "dismiss": "Dismiss until next release",
-    "toastAvailable": "MDHero v{version} is available"
-  },
   "aiLookup": {
     "editProvider": "Edit provider",
     "deleteProvider": "Delete provider",
@@ -269,8 +255,7 @@
     "diskChangedMsg": "{name} changed on disk while you were editing. Saving will overwrite that version.",
     "overwrite": "Overwrite",
     "unsavedChangesOne": "You have unsaved changes to {name}.",
-    "unsavedChangesMany": "You have unsaved changes in {count} tabs.",
-    "upToDate": "MDHero is up to date."
+    "unsavedChangesMany": "You have unsaved changes in {count} tabs."
   },
   "markdown": {
     "copy": "Copy",
@@ -292,7 +277,6 @@
     "view": "View",
     "window": "Window",
     "about": "About MDHero",
-    "checkUpdates": "Check for Updates…",
     "hide": "Hide MDHero",
     "hideOthers": "Hide Others",
     "showAll": "Show All",

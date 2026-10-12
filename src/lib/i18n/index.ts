@@ -154,7 +154,6 @@ export function formatRelativeTime(ts: number, tr: Translate): string {
  */
 const MENU_KEYS = [
   "menu.about",
-  "menu.checkUpdates",
   "menu.hide",
   "menu.hideOthers",
   "menu.showAll",

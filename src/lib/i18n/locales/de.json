@@ -203,20 +203,6 @@
   "dropzone": {
     "drop": "Zum Öffnen ablegen"
   },
-  "update": {
-    "downloading": "Update wird heruntergeladen… {progress}%",
-    "installing": "Update wird installiert…",
-    "downloadingShort": "Wird heruntergeladen… {progress}%",
-    "installingShort": "Wird installiert…",
-    "failed": "Update fehlgeschlagen",
-    "available": "Update verfügbar — ",
-    "downloadManually": "Manuell herunterladen",
-    "later": "Später",
-    "releaseNotes": "Versionshinweise",
-    "updateNow": "Jetzt aktualisieren",
-    "dismiss": "Bis zur nächsten Version ausblenden",
-    "toastAvailable": "MDHero v{version} ist verfügbar"
-  },
   "aiLookup": {
     "editProvider": "Anbieter bearbeiten",
     "deleteProvider": "Anbieter löschen",
@@ -269,8 +255,7 @@
     "diskChangedMsg": "{name} wurde auf dem Datenträger geändert, während Sie es bearbeitet haben. Beim Speichern wird diese Version überschrieben.",
     "overwrite": "Überschreiben",
     "unsavedChangesOne": "Sie haben ungespeicherte Änderungen an {name}.",
-    "unsavedChangesMany": "Sie haben ungespeicherte Änderungen in {count} Tabs.",
-    "upToDate": "MDHero ist auf dem neuesten Stand."
+    "unsavedChangesMany": "Sie haben ungespeicherte Änderungen in {count} Tabs."
   },
   "markdown": {
     "copy": "Kopieren",
@@ -292,7 +277,6 @@
     "view": "Ansicht",
     "window": "Fenster",
     "about": "Über MDHero",
-    "checkUpdates": "Nach Updates suchen…",
     "hide": "MDHero ausblenden",
     "hideOthers": "Andere ausblenden",
     "showAll": "Alle einblenden",

@@ -203,20 +203,6 @@
   "dropzone": {
     "drop": "Déposez pour ouvrir"
   },
-  "update": {
-    "downloading": "Téléchargement de la mise à jour… {progress}%",
-    "installing": "Installation de la mise à jour…",
-    "downloadingShort": "Téléchargement… {progress}%",
-    "installingShort": "Installation…",
-    "failed": "Échec de la mise à jour",
-    "available": "Mise à jour disponible — ",
-    "downloadManually": "Télécharger manuellement",
-    "later": "Plus tard",
-    "releaseNotes": "Notes de version",
-    "updateNow": "Mettre à jour maintenant",
-    "dismiss": "Ignorer jusqu'à la prochaine version",
-    "toastAvailable": "MDHero v{version} est disponible"
-  },
   "aiLookup": {
     "editProvider": "Modifier le fournisseur",
     "deleteProvider": "Supprimer le fournisseur",
@@ -269,8 +255,7 @@
     "diskChangedMsg": "{name} a été modifié sur le disque pendant que vous l'éditiez. Enregistrer écrasera cette version.",
     "overwrite": "Écraser",
     "unsavedChangesOne": "Vous avez des modifications non enregistrées sur {name}.",
-    "unsavedChangesMany": "Vous avez des modifications non enregistrées dans {count} onglets.",
-    "upToDate": "MDHero est à jour."
+    "unsavedChangesMany": "Vous avez des modifications non enregistrées dans {count} onglets."
   },
   "markdown": {
     "copy": "Copier",
@@ -292,7 +277,6 @@
     "view": "Affichage",
     "window": "Fenêtre",
     "about": "À propos de MDHero",
-    "checkUpdates": "Rechercher les mises à jour…",
     "hide": "Masquer MDHero",
     "hideOthers": "Masquer les autres",
     "showAll": "Tout afficher",
