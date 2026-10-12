@@ -46,13 +46,6 @@ pub fn create_menu_with_labels<R: Runtime>(
                 true,
                 None::<&str>,
             )?,
-            &MenuItem::with_id(
-                app,
-                "check_updates",
-                tr(labels, "menu.checkUpdates", "Check for Updates…"),
-                true,
-                None::<&str>,
-            )?,
             &PredefinedMenuItem::separator(app)?,
             &PredefinedMenuItem::hide(app, predefined_label(labels, "menu.hide"))?,
             &PredefinedMenuItem::hide_others(app, predefined_label(labels, "menu.hideOthers"))?,

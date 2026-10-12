@@ -6,7 +6,6 @@
   import { recentFiles, clearRecentFiles } from "../stores/recents";
   import { pinnedFolders } from "../stores/pinned";
   import { settings, stepFontSize, DEFAULT_FONT_SIZE } from "../stores/settings";
-  import UpdateBanner from "./UpdateBanner.svelte";
   import { basename, shortenHomePath } from "$lib/utils/path";
   import { t, formatRelativeTime } from "$lib/i18n";
   import brandLogo from "$lib/assets/mdhero-icon.png";
@@ -99,9 +98,6 @@
       <p class="hero-desc">{$t('empty.description')}</p>
     </div>
   </div>
-
-  <!-- Update banner (renders nothing when no update available or dismissed) -->
-  <UpdateBanner />
 
   <!-- Shared list row: icon tile + two-line name/path + time -->
   {#snippet fileRow(name: string, path: string, time: string, onClick: () => void, variant: 'file' | 'plan')}

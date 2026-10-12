@@ -44,12 +44,10 @@
   import ProgressBar from "$lib/components/ProgressBar.svelte";
   import ScrollToTop from "$lib/components/ScrollToTop.svelte";
   import ImageLightbox from "$lib/components/ImageLightbox.svelte";
-  import UpdateToast from "$lib/components/UpdateToast.svelte";
   import Toast from "$lib/components/Toast.svelte";
   import Editor from "$lib/components/Editor.svelte";
   import PresentationView from "$lib/components/PresentationView.svelte";
   import { updateScrollPercent } from "$lib/stores/recents";
-  import { checkForUpdates, updateAvailable, updateDismissed, checkInFlight } from "$lib/stores/updater";
   import { get } from "svelte/store";
   import { t, translate, hasChosenLocale } from "$lib/i18n";
   import { getCurrentSourceLine, scrollToSourceLine, type ViewMode } from "$lib/utils/scroll-sync";
@@ -645,17 +643,6 @@
       saveProgressNow();
       invoke("quit_app").catch(() => {});
     };
-    (window as any).__mdhero_check_updates = async () => {
-      if (get(checkInFlight)) return;
-      // Reset dismissal so a manual check always re-surfaces an available update.
-      updateDismissed.set(false);
-      await checkForUpdates(true);
-      // If still nothing, give the user explicit feedback — silence is confusing
-      // when a menu item is the trigger.
-      if (!get(updateAvailable)) {
-        alert(translate("page.upToDate"));
-      }
-    };
     // Router for AI Lookup right-click menu items. lib.rs::setup forwards any
     // menu event ID starting with "aimenu:" through this hook. The current
     // selection was stashed in the aiLookup runtime helper at contextmenu
@@ -723,9 +710,6 @@
           await openFile(openedFiles[0]);
         }
       } catch {}
-
-      // Check for updates (non-blocking, skips in dev)
-      checkForUpdates();
 
       // Check for CLI file argument
       try {
@@ -1312,7 +1296,6 @@
   {:else}
     <EmptyState onOpenUrl={() => { pasteDefaultMode = "url"; pasteVisible = true; }} />
   {/if}
-  <UpdateToast />
   <Toast />
 </div>
 

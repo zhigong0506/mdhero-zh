@@ -10,7 +10,7 @@
  *
  * Takes the platform string as a parameter so it is unit-testable without a
  * DOM; the default reads `navigator.platform`, guarded for environments where
- * `navigator` does not exist (the same guard `stores/updater.ts` uses).
+ * `navigator` does not exist (the same guard the platform store uses).
  */
 export function modifierKeyLabel(
   platform: string = typeof navigator !== "undefined" ? navigator.platform : ""

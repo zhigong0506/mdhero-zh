@@ -29,9 +29,6 @@ notify-debouncer-mini = "0.5"
 tauri-plugin-process = "2"
 tauri-plugin-window-state = "2"
 
-[target.'cfg(not(any(target_os = "android", target_os = "ios")))'.dependencies]
-tauri-plugin-updater = "2"
-
 [dev-dependencies]
 # `test` enables Tauri's mock runtime (tauri::test) used by the menu test.
 tauri = { version = "2", features = ["test"] }
